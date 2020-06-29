@@ -1,7 +1,7 @@
 import React from "react";
 import categories from "../mam-categories";
 import MamCategory from "./Mam-Category";
-import { Header } from "grommet";
+// import { Header } from "grommet";
 
 // import Heading from "rebass";
 
