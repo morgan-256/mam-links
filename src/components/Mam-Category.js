@@ -72,7 +72,7 @@ export default function MamCategory(props) {
     }
 
     url = url.replace("CATEGORY", catList);
-    console.log("url " + url);
+    // console.log("url " + url);
     return url;
   };
 

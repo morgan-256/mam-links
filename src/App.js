@@ -1,6 +1,26 @@
 import React from "react";
+import { ApplicationInsights } from "@microsoft/applicationinsights-web";
+import {
+  ReactPlugin,
+  withAITracking,
+} from "@microsoft/applicationinsights-react-js";
+import { createBrowserHistory } from "history";
+
 import { Grommet, Main } from "grommet";
 import MamLinks from "./components/Mam-Links";
+
+const browserHistory = createBrowserHistory({ basename: "" });
+var reactPlugin = new ReactPlugin();
+var appInsights = new ApplicationInsights({
+  config: {
+    instrumentationKey: "3b5765cf-1867-415e-99f6-3272f256d416",
+    extensions: [reactPlugin],
+    extensionConfig: {
+      [reactPlugin.identifier]: { history: browserHistory },
+    },
+  },
+});
+appInsights.loadAppInsights();
 
 //from grommet theme designer
 const theme = {
@@ -495,4 +515,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAITracking(reactPlugin, App);
