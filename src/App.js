@@ -1,5 +1,5 @@
 import React from "react";
-import { Grommet, Main, Footer } from "grommet";
+import { Grommet, Main } from "grommet";
 import MamLinks from "./components/Mam-Links";
 
 //from grommet theme designer
