@@ -1,6 +1,8 @@
 import React from "react";
 import Moment from "moment";
 import { Anchor, Text, TableRow, TableCell } from "grommet";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import categories from "../mam-categories";
 
 /*
@@ -100,7 +102,9 @@ export default function MamCategory(props) {
   return (
     <TableRow>
       <TableCell scope="row">
-        <Text>{label}</Text>
+        <Text>
+          <FontAwesomeIcon icon={props.icon} /> {label}
+        </Text>
       </TableCell>
       <TableCell>
         <Anchor target="_new" href={formatLink(thisWeek, now, category)}>

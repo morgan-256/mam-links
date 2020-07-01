@@ -31,6 +31,7 @@ function MamLinks() {
                     key={c.key}
                     category={c.key}
                     label={c.label}
+                    icon={c.faIcon}
                   ></MamCategory>
                 ))}
             </TableBody>
@@ -46,6 +47,7 @@ function MamLinks() {
                     key={c.key}
                     category={c.key}
                     label={c.label}
+                    icon={c.faIcon}
                   ></MamCategory>
                 ))}
             </TableBody>
@@ -65,6 +67,7 @@ function MamLinks() {
                     key={c.key}
                     category={c.key}
                     label={c.label}
+                    icon={c.faIcon}
                   ></MamCategory>
                 ))}
             </TableBody>

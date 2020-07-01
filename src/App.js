@@ -6,8 +6,13 @@ import {
 } from "@microsoft/applicationinsights-react-js";
 import { createBrowserHistory } from "history";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
 import { Grommet, Main } from "grommet";
 import MamLinks from "./components/Mam-Links";
+
+library.add(fas);
 
 const browserHistory = createBrowserHistory({ basename: "" });
 var reactPlugin = new ReactPlugin();

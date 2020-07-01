@@ -1,99 +1,251 @@
 {
   "categories": [
-    { "key": "ALL", "label": "All Categories" },
-    { "key": "m13", "label": "All AudioBooks" },
-    { "key": "m14", "label": "All Ebooks" },
-    { "key": "m15", "label": "Musicology" },
-    { "key": "m16", "label": "Radio" },
-    { "key": "c39", "label": "Audiobooks - Action/Adventure" },
-    { "key": "c49", "label": "Audiobooks - Art" },
-    { "key": "c50", "label": "Audiobooks - Biographical" },
-    { "key": "c83", "label": "Audiobooks - Business" },
-    { "key": "c51", "label": "Audiobooks - Computer/Internet" },
-    { "key": "c97", "label": "Audiobooks - Crafts" },
-    { "key": "c40", "label": "Audiobooks - Crime/Thriller" },
-    { "key": "c41", "label": "Audiobooks - Fantasy" },
-    { "key": "c106", "label": "Audiobooks - Food" },
-    { "key": "c42", "label": "Audiobooks - General Fiction" },
-    { "key": "c52", "label": "Audiobooks - General Non-Fic" },
-    { "key": "c98", "label": "Audiobooks - Historical Fiction" },
-    { "key": "c54", "label": "Audiobooks - History" },
-    { "key": "c55", "label": "Audiobooks - Home/Garden" },
-    { "key": "c43", "label": "Audiobooks - Horror" },
-    { "key": "c99", "label": "Audiobooks - Humor" },
-    { "key": "c84", "label": "Audiobooks - Instructional" },
-    { "key": "c44", "label": "Audiobooks - Juvenile" },
-    { "key": "c56", "label": "Audiobooks - Language" },
-    { "key": "c45", "label": "Audiobooks - Literary Classics" },
-    { "key": "c57", "label": "Audiobooks - Math/Science/Tech" },
-    { "key": "c85", "label": "Audiobooks - Medical" },
-    { "key": "c87", "label": "Audiobooks - Mystery" },
-    { "key": "c119", "label": "Audiobooks - Nature" },
-    { "key": "c88", "label": "Audiobooks - Philosophy" },
-    { "key": "c58", "label": "Audiobooks - Pol/Soc/Relig" },
-    { "key": "c59", "label": "Audiobooks - Recreation" },
-    { "key": "c46", "label": "Audiobooks - Romance" },
-    { "key": "c47", "label": "Audiobooks - Science Fiction" },
-    { "key": "c53", "label": "Audiobooks - Self-Help" },
-    { "key": "c89", "label": "Audiobooks - Travel/Adventure" },
-    { "key": "c100", "label": "Audiobooks - True Crime" },
-    { "key": "c108", "label": "Audiobooks - Urban Fantasy" },
-    { "key": "c48", "label": "Audiobooks - Western" },
-    { "key": "c111", "label": "Audiobooks - Young Adult" },
-    { "key": "c60", "label": "Ebooks - Action/Adventure" },
-    { "key": "c71", "label": "Ebooks - Art" },
-    { "key": "c72", "label": "Ebooks - Biographical" },
-    { "key": "c90", "label": "Ebooks - Business" },
-    { "key": "c61", "label": "Ebooks - Comics/Graphic novels" },
-    { "key": "c73", "label": "Ebooks - Computer/Internet" },
-    { "key": "c101", "label": "Ebooks - Crafts" },
-    { "key": "c62", "label": "Ebooks - Crime/Thriller" },
-    { "key": "c63", "label": "Ebooks - Fantasy" },
-    { "key": "c107", "label": "Ebooks - Food" },
-    { "key": "c64", "label": "Ebooks - General Fiction" },
-    { "key": "c74", "label": "Ebooks - General Non-Fiction" },
-    { "key": "c102", "label": "Ebooks - Historical Fiction" },
-    { "key": "c76", "label": "Ebooks - History" },
-    { "key": "c77", "label": "Ebooks - Home/Garden" },
-    { "key": "c65", "label": "Ebooks - Horror" },
-    { "key": "c103", "label": "Ebooks - Humor" },
-    { "key": "c115", "label": "Ebooks - Illusion/Magic" },
-    { "key": "c91", "label": "Ebooks - Instructional" },
-    { "key": "c66", "label": "Ebooks - Juvenile" },
-    { "key": "c78", "label": "Ebooks - Language" },
-    { "key": "c67", "label": "Ebooks - Literary Classics" },
-    { "key": "c79", "label": "Ebooks - Magazines/Newspapers" },
-    { "key": "c80", "label": "Ebooks - Math/Science/Tech" },
-    { "key": "c92", "label": "Ebooks - Medical" },
-    { "key": "c118", "label": "Ebooks - Mixed Collections" },
-    { "key": "c94", "label": "Ebooks - Mystery" },
-    { "key": "c120", "label": "Ebooks - Nature" },
-    { "key": "c95", "label": "Ebooks - Philosophy" },
-    { "key": "c81", "label": "Ebooks - Pol/Soc/Relig" },
-    { "key": "c82", "label": "Ebooks - Recreation" },
-    { "key": "c68", "label": "Ebooks - Romance" },
-    { "key": "c69", "label": "Ebooks - Science Fiction" },
-    { "key": "c75", "label": "Ebooks - Self-Help" },
-    { "key": "c96", "label": "Ebooks - Travel/Adventure" },
-    { "key": "c104", "label": "Ebooks - True Crime" },
-    { "key": "c109", "label": "Ebooks - Urban Fantasy" },
-    { "key": "c70", "label": "Ebooks - Western" },
-    { "key": "c112", "label": "Ebooks - Young Adult" },
-    { "key": "c19", "label": "Guitar/Bass Tabs" },
-    { "key": "c20", "label": "Individual Sheet" },
-    { "key": "c24", "label": "Individual Sheet MP3" },
-    { "key": "c126", "label": "Instructional Book with Video" },
-    { "key": "c22", "label": "Instructional Media - Music" },
-    { "key": "c113", "label": "Lick Library - LTP/Jam With" },
-    { "key": "c114", "label": "Lick Library - Techniques/QL" },
-    { "key": "c17", "label": "Music - Complete Editions" },
-    { "key": "c26", "label": "Music Book" },
-    { "key": "c27", "label": "Music Book MP3" },
-    { "key": "c30", "label": "Sheet Collection" },
-    { "key": "c31", "label": "Sheet Collection MP3" },
-    { "key": "c127", "label": "Radio -  Comedy" },
-    { "key": "c130", "label": "Radio - Drama" },
-    { "key": "c128", "label": "Radio - Factual/Documentary" },
-    { "key": "c132", "label": "Radio - Reading" }
+    { "key": "ALL", "label": "All Categories", "faIcon": "star-of-life" },
+    { "key": "m13", "label": "All AudioBooks", "faIcon": "star-of-life" },
+    { "key": "m14", "label": "All Ebooks", "faIcon": "star-of-life" },
+    { "key": "m15", "label": "Musicology", "faIcon": "music" },
+    { "key": "m16", "label": "Radio", "faIcon": "microphone-alt" },
+    {
+      "key": "c39",
+      "label": "Audiobooks - Action/Adventure",
+      "faIcon": "running"
+    },
+    { "key": "c49", "label": "Audiobooks - Art", "faIcon": "palette" },
+    {
+      "key": "c50",
+      "label": "Audiobooks - Biographical",
+      "faIcon": "user-edit"
+    },
+    { "key": "c83", "label": "Audiobooks - Business", "faIcon": "user-tie" },
+    {
+      "key": "c51",
+      "label": "Audiobooks - Computer/Internet",
+      "faIcon": "laptop-code"
+    },
+    { "key": "c97", "label": "Audiobooks - Crafts", "faIcon": "mitten" },
+    {
+      "key": "c40",
+      "label": "Audiobooks - Crime/Thriller",
+      "faIcon": "user-secret"
+    },
+    { "key": "c41", "label": "Audiobooks - Fantasy", "faIcon": "dragon" },
+    { "key": "c106", "label": "Audiobooks - Food", "faIcon": "utensils" },
+    { "key": "c42", "label": "Audiobooks - General Fiction", "faIcon": "book" },
+    {
+      "key": "c52",
+      "label": "Audiobooks - General Non-Fic",
+      "faIcon": "book-reader"
+    },
+    {
+      "key": "c98",
+      "label": "Audiobooks - Historical Fiction",
+      "faIcon": "history"
+    },
+    { "key": "c54", "label": "Audiobooks - History", "faIcon": "history" },
+    { "key": "c55", "label": "Audiobooks - Home/Garden", "faIcon": "home" },
+    { "key": "c43", "label": "Audiobooks - Horror", "faIcon": "book-dead" },
+    { "key": "c99", "label": "Audiobooks - Humor", "faIcon": "theater-masks" },
+    {
+      "key": "c84",
+      "label": "Audiobooks - Instructional",
+      "faIcon": "chalkboard-teacher"
+    },
+    { "key": "c44", "label": "Audiobooks - Juvenile", "faIcon": "grimace" },
+    { "key": "c56", "label": "Audiobooks - Language", "faIcon": "language" },
+    {
+      "key": "c45",
+      "label": "Audiobooks - Literary Classics",
+      "faIcon": "trophy"
+    },
+    {
+      "key": "c57",
+      "label": "Audiobooks - Math/Science/Tech",
+      "faIcon": "square-root-alt"
+    },
+    { "key": "c85", "label": "Audiobooks - Medical", "faIcon": "book-medical" },
+    {
+      "key": "c87",
+      "label": "Audiobooks - Mystery",
+      "faIcon": "question-circle"
+    },
+    { "key": "c119", "label": "Audiobooks - Nature", "faIcon": "tree" },
+    { "key": "c88", "label": "Audiobooks - Philosophy", "faIcon": "brain" },
+    {
+      "key": "c58",
+      "label": "Audiobooks - Pol/Soc/Relig",
+      "faIcon": "balance-scale"
+    },
+    {
+      "key": "c59",
+      "label": "Audiobooks - Recreation",
+      "faIcon": "umbrella-beach"
+    },
+    {
+      "key": "c46",
+      "label": "Audiobooks - Romance",
+      "faIcon": "kiss-wink-heart"
+    },
+    {
+      "key": "c47",
+      "label": "Audiobooks - Science Fiction",
+      "faIcon": "hand-spock"
+    },
+    {
+      "key": "c53",
+      "label": "Audiobooks - Self-Help",
+      "faIcon": "compress-arrows-alt"
+    },
+    {
+      "key": "c89",
+      "label": "Audiobooks - Travel/Adventure",
+      "faIcon": "route"
+    },
+    {
+      "key": "c100",
+      "label": "Audiobooks - True Crime",
+      "faIcon": "user-secret"
+    },
+    { "key": "c108", "label": "Audiobooks - Urban Fantasy", "faIcon": "city" },
+    { "key": "c48", "label": "Audiobooks - Western", "faIcon": "hat-cowboy" },
+    {
+      "key": "c111",
+      "label": "Audiobooks - Young Adult",
+      "faIcon": "hand-middle-finger"
+    },
+    { "key": "c60", "label": "Ebooks - Action/Adventure", "faIcon": "running" },
+    { "key": "c71", "label": "Ebooks - Art", "faIcon": "palette" },
+    { "key": "c72", "label": "Ebooks - Biographical", "faIcon": "user-edit" },
+    { "key": "c90", "label": "Ebooks - Business", "faIcon": "user-tie" },
+    {
+      "key": "c61",
+      "label": "Ebooks - Comics/Graphic novels",
+      "faIcon": "mask"
+    },
+    {
+      "key": "c73",
+      "label": "Ebooks - Computer/Internet",
+      "faIcon": "laptop-code"
+    },
+    { "key": "c101", "label": "Ebooks - Crafts", "faIcon": "mitten" },
+    {
+      "key": "c62",
+      "label": "Ebooks - Crime/Thriller",
+      "faIcon": "user-secret"
+    },
+    { "key": "c63", "label": "Ebooks - Fantasy", "faIcon": "dragon" },
+    { "key": "c107", "label": "Ebooks - Food", "faIcon": "utensils" },
+    { "key": "c64", "label": "Ebooks - General Fiction", "faIcon": "book" },
+    {
+      "key": "c74",
+      "label": "Ebooks - General Non-Fiction",
+      "faIcon": "book-reader"
+    },
+    {
+      "key": "c102",
+      "label": "Ebooks - Historical Fiction",
+      "faIcon": "history"
+    },
+    { "key": "c76", "label": "Ebooks - History", "faIcon": "history" },
+    { "key": "c77", "label": "Ebooks - Home/Garden", "faIcon": "home" },
+    { "key": "c65", "label": "Ebooks - Horror", "faIcon": "book-dead" },
+    { "key": "c103", "label": "Ebooks - Humor", "faIcon": "theater-masks" },
+    {
+      "key": "c115",
+      "label": "Ebooks - Illusion/Magic",
+      "faIcon": "hat-wizard"
+    },
+    {
+      "key": "c91",
+      "label": "Ebooks - Instructional",
+      "faIcon": "chalkboard-teacher"
+    },
+    { "key": "c66", "label": "Ebooks - Juvenile", "faIcon": "grimace" },
+    { "key": "c78", "label": "Ebooks - Language", "faIcon": "language" },
+    {
+      "key": "c67",
+      "label": "Ebooks - Literary Classics",
+      "faIcon": "trophy"
+    },
+    {
+      "key": "c79",
+      "label": "Ebooks - Magazines/Newspapers",
+      "faIcon": "newspaper"
+    },
+    {
+      "key": "c80",
+      "label": "Ebooks - Math/Science/Tech",
+      "faIcon": "square-root-alt"
+    },
+    { "key": "c92", "label": "Ebooks - Medical", "faIcon": "book-medical" },
+    {
+      "key": "c118",
+      "label": "Ebooks - Mixed Collections",
+      "faIcon": "blender"
+    },
+    { "key": "c94", "label": "Ebooks - Mystery", "faIcon": "question-circle" },
+    { "key": "c120", "label": "Ebooks - Nature", "faIcon": "tree" },
+    { "key": "c95", "label": "Ebooks - Philosophy", "faIcon": "brain" },
+    {
+      "key": "c81",
+      "label": "Ebooks - Pol/Soc/Relig",
+      "faIcon": "balance-scale"
+    },
+    {
+      "key": "c82",
+      "label": "Ebooks - Recreation",
+      "faIcon": "umbrella-beach"
+    },
+    { "key": "c68", "label": "Ebooks - Romance", "faIcon": "kiss-wink-heart" },
+    {
+      "key": "c69",
+      "label": "Ebooks - Science Fiction",
+      "faIcon": "hand-spock"
+    },
+    {
+      "key": "c75",
+      "label": "Ebooks - Self-Help",
+      "faIcon": "compress-arrows-alt"
+    },
+    { "key": "c96", "label": "Ebooks - Travel/Adventure", "faIcon": "route" },
+    { "key": "c104", "label": "Ebooks - True Crime", "faIcon": "user-secret" },
+    { "key": "c109", "label": "Ebooks - Urban Fantasy", "faIcon": "city" },
+    { "key": "c70", "label": "Ebooks - Western", "faIcon": "hat-cowboy" },
+    {
+      "key": "c112",
+      "label": "Ebooks - Young Adult",
+      "faIcon": "hand-middle-finger"
+    },
+    { "key": "c19", "label": "Guitar/Bass Tabs", "faIcon": "guitar" },
+    { "key": "c20", "label": "Individual Sheet", "faIcon": "music" },
+    { "key": "c24", "label": "Individual Sheet MP3", "faIcon": "music" },
+    {
+      "key": "c126",
+      "label": "Instructional Book with Video",
+      "faIcon": "chalkboard-teacher"
+    },
+    {
+      "key": "c22",
+      "label": "Instructional Media - Music",
+      "faIcon": "chalkboard-teacher"
+    },
+    { "key": "c113", "label": "Lick Library - LTP/Jam With", "faIcon": "book" },
+    {
+      "key": "c114",
+      "label": "Lick Library - Techniques/QL",
+      "faIcon": "book"
+    },
+    { "key": "c17", "label": "Music - Complete Editions", "faIcon": "music" },
+    { "key": "c26", "label": "Music Book", "faIcon": "music" },
+    { "key": "c27", "label": "Music Book MP3", "faIcon": "music" },
+    { "key": "c30", "label": "Sheet Collection", "faIcon": "music" },
+    { "key": "c31", "label": "Sheet Collection MP3", "faIcon": "music" },
+    { "key": "c127", "label": "Radio -  Comedy", "faIcon": "broadcast-tower" },
+    { "key": "c130", "label": "Radio - Drama", "faIcon": "broadcast-tower" },
+    {
+      "key": "c128",
+      "label": "Radio - Factual/Documentary",
+      "faIcon": "broadcast-tower"
+    },
+    { "key": "c132", "label": "Radio - Reading", "faIcon": "broadcast-tower" }
   ]
 }
