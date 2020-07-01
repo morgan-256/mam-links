@@ -1,5 +1,5 @@
 import React from "react";
-import { Grommet, Main } from "grommet";
+import { Grommet, Main, Footer } from "grommet";
 import MamLinks from "./components/Mam-Links";
 
 //from grommet theme designer
@@ -482,10 +482,15 @@ theme.tab = {
 
 function App() {
   return (
-    <Grommet theme={theme}>
-      <Main border={{ color: "brand", size: "large" }} pad="medium">
+    <Grommet theme={theme} style={{ height: "100%" }}>
+      <Main
+        border={{ color: "brand", size: "large" }}
+        pad="medium"
+        height={{ min: "100%" }}
+      >
         <MamLinks></MamLinks>
       </Main>
+      {/* <Footer background="brand" pad="medium"></Footer> */}
     </Grommet>
   );
 }

@@ -15,6 +15,8 @@ export default function MamCategory(props) {
   let linkTemplate =
     "https://www.myanonamouse.net/tor/browse.php?&tor[srchIn][title]=true&tor[srchIn][author]=true&tor[srchIn][narrator]=true&tor[searchType]=all&tor[searchIn]=torrentsCATEGORY&tor[browse_lang][]=1&tor[browseFlagsHideVsShow]=0&tor[startDate]=STARTDATE&tor[endDate]=ENDDATE&tor[sortType]=SORTTYPE&tor[startNumber]=0&thumbnail=true";
 
+  let label = props.label.replace("Ebooks - ", "").replace("Audiobooks - ", "");
+
   let sort = "snatchedDesc";
   let now = new Date();
   let thisWeek = new Date();
@@ -44,31 +46,61 @@ export default function MamCategory(props) {
 
   let setCategoryQuerystring = (url, category) => {
     let catList = "";
-    if (category === "14") catList = setMetaCategory("ebook");
-    if (category === "13") catList = setMetaCategory("audiobook");
+    if (category === "14") {
+      catList = setMetaCategory("ebook");
+    } else if (category === "13") {
+      catList = setMetaCategory("audiobook");
+    } else if (category === "15") {
+      catList = setMetaCategory(null, [
+        "c19",
+        "c20",
+        "c24",
+        "c126",
+        "c22",
+        "c113",
+        "c114",
+        "c17",
+        "c26",
+        "c27",
+        "c30",
+        "c31",
+      ]);
+    } else if (category === "16") {
+      catList = setMetaCategory("radio");
+    } else {
+      catList = "&tor[cat][]=" + category; //.replace("c", "").replace("m", "");
+    }
 
     url = url.replace("CATEGORY", catList);
     console.log("url " + url);
     return url;
   };
 
-  let setMetaCategory = (label) => {
+  let setMetaCategory = (label, staticCategories) => {
     let result = "";
-    categories.categories.forEach((c) => {
-      if (
-        c.key.substring(0, 1) === "c" &&
-        c.label.toLowerCase().indexOf(label) > -1
-      )
-        result += "&tor[cat][]=" + c.key.replace("c", "");
-    });
+
+    if (label !== null) {
+      categories.categories.forEach((c) => {
+        if (
+          c.key.substring(0, 1) === "c" &&
+          c.label.toLowerCase().indexOf(label) > -1
+        )
+          result += "&tor[cat][]=" + c.key.replace("c", "");
+      });
+    } else {
+      staticCategories.forEach((c) => {
+        result += "&tor[cat][]=" + c.replace("c", "");
+      });
+    }
     result += "&tor[cat][]=0";
+
     return result;
   };
 
   return (
     <TableRow>
       <TableCell scope="row">
-        <Text>{props.label}</Text>
+        <Text>{label}</Text>
       </TableCell>
       <TableCell>
         <Anchor target="_new" href={formatLink(thisWeek, now, category)}>
