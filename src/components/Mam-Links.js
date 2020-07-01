@@ -1,24 +1,77 @@
 import React from "react";
 import categories from "../mam-categories";
 import MamCategory from "./Mam-Category";
-// import { Header } from "grommet";
+import { Box, Header, Tabs, Tab, Table, TableBody } from "grommet";
 
 // import Heading from "rebass";
 
 function MamLinks() {
   return (
-    <div>
-      <h1>Categories with links to most popular downloads by timespan</h1>
-      {categories.categories
-        // .filter((c) => c.label.toLowerCase().indexOf("ebook") >= 0)
-        .map((c) => (
-          <MamCategory
-            key={c.key}
-            category={c.key}
-            label={c.label}
-          ></MamCategory>
-        ))}
-    </div>
+    <React.Fragment>
+      <Header background="brand" round="small" pad="medium">
+        MAM Links
+      </Header>
+      <Box pad="medium">
+        Categories with links to most popular downloads by timespan
+      </Box>
+      <Tabs
+        pad="small"
+        margin="small"
+        alignControls="start"
+        alignSelf="start"
+        justify="start"
+      >
+        <Tab title="Ebooks">
+          <Table>
+            <TableBody>
+              {categories.categories
+                .filter((c) => c.label.toLowerCase().indexOf("ebook") >= 0)
+                .map((c) => (
+                  <MamCategory
+                    key={c.key}
+                    category={c.key}
+                    label={c.label}
+                  ></MamCategory>
+                ))}
+            </TableBody>
+          </Table>
+        </Tab>
+        <Tab title="Audiobooks">
+          <Table>
+            <TableBody>
+              {categories.categories
+                .filter((c) => c.label.toLowerCase().indexOf("audiobook") >= 0)
+                .map((c) => (
+                  <MamCategory
+                    key={c.key}
+                    category={c.key}
+                    label={c.label}
+                  ></MamCategory>
+                ))}
+            </TableBody>
+          </Table>
+        </Tab>
+        <Tab title="Other">
+          <Table>
+            <TableBody>
+              {categories.categories
+                .filter(
+                  (c) =>
+                    c.label.toLowerCase().indexOf("audiobook") < 0 &&
+                    c.label.toLowerCase().indexOf("ebook") < 0
+                )
+                .map((c) => (
+                  <MamCategory
+                    key={c.key}
+                    category={c.key}
+                    label={c.label}
+                  ></MamCategory>
+                ))}
+            </TableBody>
+          </Table>
+        </Tab>
+      </Tabs>
+    </React.Fragment>
   );
 }
 

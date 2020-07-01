@@ -1,8 +1,8 @@
 {
   "categories": [
-    { "key": "ALL", "label": "all categories" },
-    { "key": "m13", "label": "AudioBooks" },
-    { "key": "m14", "label": "E-Books" },
+    { "key": "ALL", "label": "All Categories" },
+    { "key": "m13", "label": "All AudioBooks" },
+    { "key": "m14", "label": "All Ebooks" },
     { "key": "m15", "label": "Musicology" },
     { "key": "m16", "label": "Radio" },
     { "key": "c39", "label": "Audiobooks - Action/Adventure" },
