@@ -36,8 +36,8 @@ const theme = {
   global: {
     colors: {
       brand: {
-        dark: "#ba7",
-        light: "#ba7",
+        dark: "#EAC117",
+        light: "#EAC117",
       },
       background: {
         dark: "#202020",
@@ -56,7 +56,7 @@ const theme = {
         light: "#11111111",
       },
       text: {
-        dark: "#AAA",
+        dark: "#EEE",
         light: "#333333",
       },
       "text-strong": {
