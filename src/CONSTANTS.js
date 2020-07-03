@@ -1,4 +1,5 @@
 const CONSTANTS = {
+    MAMSTARTYEAR: 2008,
     LINKTEMPLATE: "https://www.myanonamouse.net/tor/browse.php?&tor[srchIn][title]=true&tor[srchIn][author]=true&tor[srchIn][narrator]=true&tor[searchType]=all&tor[searchIn]=torrentsCATEGORY&tor[browse_lang][]=1&tor[browseFlagsHideVsShow]=0&tor[startDate]=STARTDATE&tor[endDate]=ENDDATE&tor[sortType]=SORTTYPE&tor[startNumber]=0&thumbnail=true",
     QS_KEYS: { STARTDATE: "STARTDATE", ENDDATE: "ENDDATE", SORTTYPE: "SORTTYPE" },
     QS_VALUES: { CATEGORY: "&tor[cat][]=", SORT: "snatchedDesc" },
