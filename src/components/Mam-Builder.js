@@ -2,27 +2,27 @@ import React from "react";
 import moment from "moment";
 import categoryData from "../mam-categories";
 import { Box, Heading, Select, Anchor, Button } from "grommet";
-import CONSTANTS from "../CONSTANTS"
+import Constants from "../Constants"
 import setCategoryQuerystring from "../CategoryHelper";
 
 function MamBuilder() {
     const currentYear = moment().year();
-    const [startYear, setStartYear] = React.useState(CONSTANTS.MAMSTARTYEAR);
+    const [startYear, setStartYear] = React.useState(Constants.MAMStartYear);
     const [startMonth, setStartMonth] = React.useState(1);
     const [endYear, setEndYear] = React.useState(currentYear);
     const [endMonth, setEndMonth] = React.useState(12);
     const [options, setOptions] = React.useState(categoryData.categories);
     const [selectedCategory, setSelectedCategory] = React.useState(categoryData.categories[0]);
-    const yearsList = Array.from(Array(currentYear - 2007), (_, x) => CONSTANTS.MAMSTARTYEAR + x);
+    const yearsList = Array.from(Array(currentYear - Constants.MAMStartYear - 1), (_, x) => Constants.MAMStartYear + x);
     const monthsList = Array.from(Array(12), (_, x) => x + 1);
 
     const onStartYearChanged = (x) => setStartYear(x);
 
     const onNavigateClick = () => {
         const category = selectedCategory.key.replace("c", "").replace("m", "");
-        const start = moment([startYear, startMonth - 1, 1]).format(CONSTANTS.DATEFORMAT);
-        const end = moment([endYear, endMonth - 1, 1]).endOf('month').format(CONSTANTS.DATEFORMAT);
-        let result = CONSTANTS.LINKTEMPLATE.replace(CONSTANTS.QS_KEYS.STARTDATE, start).replace(CONSTANTS.QS_KEYS.ENDDATE, end).replace(CONSTANTS.QS_KEYS.SORTTYPE, CONSTANTS.QS_VALUES.SORT);
+        const start = moment([startYear, startMonth - 1, 1]).format(Constants.DateFormat);
+        const end = moment([endYear, endMonth - 1, 1]).endOf('month').format(Constants.DateFormat);
+        let result = Constants.LinkTemplate.replace(Constants.QS_Keys.STARTDATE, start).replace(Constants.QS_Keys.ENDDATE, end).replace(Constants.QS_Keys.SORTTYPE, Constants.QS_Values.SORT);
         result = setCategoryQuerystring(result, category);
         window.open(encodeURI(result));
     }
@@ -80,8 +80,8 @@ function MamBuilder() {
                 })
             }
             <Box pad="medium">
-                Chosen Range: {moment([startYear, startMonth - 1, 1]).format(CONSTANTS.DATEFORMAT)} to  {moment([endYear, endMonth - 1, 1]).endOf('month').format(CONSTANTS.DATEFORMAT)}
-                <Button margin="medium" onClick={onNavigateClick} label="Go" disabled={moment([startYear, startMonth - 1, 1]).isAfter(moment([endYear, endMonth - 1, 1]).endOf('month').format(CONSTANTS.DATEFORMAT))} />
+                Chosen Range: {moment([startYear, startMonth - 1, 1]).format(Constants.DateFormat)} to  {moment([endYear, endMonth - 1, 1]).endOf('month').format(Constants.DateFormat)}
+                <Button margin="medium" onClick={onNavigateClick} label="Go" disabled={moment([startYear, startMonth - 1, 1]).isAfter(moment([endYear, endMonth - 1, 1]).endOf('month').format(Constants.DateFormat))} />
             </Box>
         </React.Fragment >
     )

@@ -3,7 +3,7 @@ import Moment from "moment";
 import { Anchor, Text, TableRow, TableCell } from "grommet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import setCategoryQuerystring from "../CategoryHelper"
-import CONSTANTS from "../CONSTANTS"
+import Constants from "../Constants"
 
 
 export default function MamCategory(props) {
@@ -16,10 +16,10 @@ export default function MamCategory(props) {
     let past = new Date();
     past.setDate(past.getDate() - days);
 
-    let start = Moment(past).format(CONSTANTS.DATEFORMAT);
-    let end = Moment(now).format(CONSTANTS.DATEFORMAT);
+    let start = Moment(past).format(Constants.DateFormat);
+    let end = Moment(now).format(Constants.DateFormat);
     category = category.replace("c", "").replace("m", "");
-    let result = CONSTANTS.LINKTEMPLATE.replace(CONSTANTS.QS_KEYS.STARTDATE, start).replace(CONSTANTS.QS_KEYS.ENDDATE, end).replace(CONSTANTS.QS_KEYS.SORTTYPE, CONSTANTS.QS_VALUES.SORT);
+    let result = Constants.LinkTemplate.replace(Constants.QS_Keys.STARTDATE, start).replace(Constants.QS_Keys.ENDDATE, end).replace(Constants.QS_Keys.SORTTYPE, Constants.QS_Values.SORT);
 
     result = setCategoryQuerystring(result, category);
     return encodeURI(result);
