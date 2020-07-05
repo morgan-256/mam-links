@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import moment from "moment";
 import categoryData from "../mam-categories";
 import { Box, Heading, Select, Anchor, Button } from "grommet";
@@ -7,12 +7,12 @@ import setCategoryQuerystring from "../CategoryHelper";
 
 function MamBuilder() {
     const currentYear = moment().year();
-    const [startYear, setStartYear] = React.useState(Constants.MAMStartYear);
-    const [startMonth, setStartMonth] = React.useState(1);
-    const [endYear, setEndYear] = React.useState(currentYear);
-    const [endMonth, setEndMonth] = React.useState(12);
-    const [options, setOptions] = React.useState(categoryData.categories);
-    const [selectedCategory, setSelectedCategory] = React.useState(categoryData.categories[0]);
+    const [startYear, setStartYear] = useState(Constants.MAMStartYear);
+    const [startMonth, setStartMonth] = useState(1);
+    const [endYear, setEndYear] = useState(currentYear);
+    const [endMonth, setEndMonth] = useState(12);
+    const [options, setOptions] = useState(categoryData.categories);
+    const [selectedCategory, setSelectedCategory] = useState(categoryData.categories[0]);
     const yearsList = Array.from(Array(currentYear - Constants.MAMStartYear - 1), (_, x) => Constants.MAMStartYear + x);
     const monthsList = Array.from(Array(12), (_, x) => x + 1);
 
