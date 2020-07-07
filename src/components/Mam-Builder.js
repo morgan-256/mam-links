@@ -1,4 +1,5 @@
-import { React, useState } from "react";
+import React, { useState } from 'react';
+
 import moment from "moment";
 import categoryData from "../mam-categories";
 import { Box, Heading, Select, Anchor, Button } from "grommet";
@@ -28,7 +29,7 @@ function MamBuilder() {
     }
 
     return (
-        <React.Fragment>
+        <div>
             <Heading level="4">Category</Heading>
             <Select pad="small" labelKey="label"
                 options={options}
@@ -83,7 +84,7 @@ function MamBuilder() {
                 Chosen Range: {moment([startYear, startMonth - 1, 1]).format(Constants.DateFormat)} to  {moment([endYear, endMonth - 1, 1]).endOf('month').format(Constants.DateFormat)}
                 <Button margin="medium" onClick={onNavigateClick} label="Go" disabled={moment([startYear, startMonth - 1, 1]).isAfter(moment([endYear, endMonth - 1, 1]).endOf('month').format(Constants.DateFormat))} />
             </Box>
-        </React.Fragment >
+        </div>
     )
 }
 
