@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 import moment from "moment";
 import categoryData from "../mam-categories";
-import { Box, Heading, Select, Anchor, Button } from "grommet";
+import { Box, Heading, Anchor, Button } from "grommet";
 import Constants from "../Constants"
-import setCategoryQuerystring from "../CategoryHelper";
+import { setCategoryQuerystring, cleanCategoryLabel } from "../CategoryHelper";
 
 function MamBuilder() {
     const currentYear = moment().year();
@@ -12,9 +12,9 @@ function MamBuilder() {
     const [startMonth, setStartMonth] = useState(1);
     const [endYear, setEndYear] = useState(currentYear);
     const [endMonth, setEndMonth] = useState(12);
-    const [options, setOptions] = useState(categoryData.categories);
+    // const [options, setOptions] = useState(categoryData.categories);
     const [selectedCategory, setSelectedCategory] = useState(categoryData.categories[0]);
-    const yearsList = Array.from(Array(currentYear - Constants.MAMStartYear - 1), (_, x) => Constants.MAMStartYear + x);
+    const yearsList = Array.from(Array(currentYear - Constants.MAMStartYear + 1), (_, x) => Constants.MAMStartYear + x);
     const monthsList = Array.from(Array(12), (_, x) => x + 1);
 
     const onStartYearChanged = (x) => setStartYear(x);
@@ -31,7 +31,28 @@ function MamBuilder() {
     return (
         <div>
             <Heading level="4">Category</Heading>
-            <Select pad="small" labelKey="label"
+            <Heading level="5" margin="small">Ebooks</Heading>
+            {categoryData.categories
+                .filter((x) => x.label.toLowerCase().indexOf("ebook") >= 0)
+                .map((x) => (
+                    <Anchor color={x.key === selectedCategory.key ? "text-strong" : "brand"} key={x.key} primary size="small" margin="small" label={cleanCategoryLabel(x.label)} onClick={() => setSelectedCategory(x)} />
+                ))}
+            <Heading level="5" margin="small">AudioBooks</Heading>
+            {categoryData.categories
+                .filter((x) => x.label.toLowerCase().indexOf("audiobook") >= 0)
+                .map((x) => (
+                    <Anchor color={x.key === selectedCategory.key ? "text-strong" : "brand"} key={x.key} primary size="small" margin="small" label={cleanCategoryLabel(x.label)} onClick={() => setSelectedCategory(x)} />
+                ))}
+
+            <Heading level="5" margin="small">Other</Heading>
+            {categoryData.categories
+                .filter((x) => x.label.toLowerCase().indexOf("ebook") < 0 && x.label.toLowerCase().indexOf("audiobook") < 0)
+                .map((x) => (
+                    <Anchor color={x.key === selectedCategory.key ? "text-strong" : "brand"} key={x.key} primary size="small" margin="small" label={cleanCategoryLabel(x.label)} onClick={() => setSelectedCategory(x)} />
+                ))}
+
+
+            {/* <Select pad="small" labelKey="label"
                 options={options}
                 valueKey="key"
                 value={selectedCategory}
@@ -47,7 +68,7 @@ function MamBuilder() {
                     const exp = new RegExp(escapedText, "i");
                     setOptions(categoryData.categories.filter(o => exp.test(o.label)));
                 }}>
-            </Select>
+            </Select> */}
             <Heading level="4">Start Year &amp; Month</Heading>
             {
                 yearsList.map(x => {

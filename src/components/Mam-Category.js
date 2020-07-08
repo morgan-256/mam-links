@@ -2,7 +2,7 @@ import React from "react";
 import Moment from "moment";
 import { Anchor, Text, TableRow, TableCell } from "grommet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import setCategoryQuerystring from "../CategoryHelper"
+import { setCategoryQuerystring } from "../CategoryHelper"
 import Constants from "../Constants"
 
 

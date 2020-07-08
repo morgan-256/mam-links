@@ -19,7 +19,11 @@ function setMetaCategory(label, staticCategories) {
     return result;
 }
 
-export default function setCategoryQuerystring(url, category) {
+export const cleanCategoryLabel = (category) => {
+    return category.replace("Ebooks - ", "").replace("Audiobooks - ", "");
+}
+
+export const setCategoryQuerystring = (url, category) => {
     //handles meta categories, either with keyword or static list
     let catList = "";
     switch (category) {
