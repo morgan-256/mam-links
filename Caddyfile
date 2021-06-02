@@ -1,4 +1,8 @@
-http://localhost
+{
+    auto_https off
+}
 
-root * /srv
-file_server
+:80, :88, http://mamlinks:88, https://mamlinks.treehouse38.duckdns.org/ {
+    root * /srv
+    file_server
+}
